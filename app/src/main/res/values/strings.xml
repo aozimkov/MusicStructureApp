@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Music Structure App</string>
+    <string name="song_view">Song</string>
+    <string name="search_view">Search</string>
+    <string name="recommended_view">Recommended tracks</string>
+    <!-- Song View -->
+    <string name="description">description</string>
+    <string name="related_tracks">related tracks</string>
+    <!-- Search View -->
+    <string name="search_inviation">Type something to search</string>
+    <string name="search_results"></string>
+    <!-- Recommended view -->
+    <string name="recommended_title">Recommended for you</string>
+</resources>
