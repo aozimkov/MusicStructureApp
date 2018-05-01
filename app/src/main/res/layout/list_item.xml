@@ -7,12 +7,9 @@
     android:id="@+id/list_element">
 
     <ImageView
-        android:layout_width="64dp"
-        android:layout_height="match_parent"
         android:id="@+id/track_image"
         android:src="@drawable/ic_launcher_background"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center_vertical"/>
+        style="@style/ListItems.Image"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -20,35 +17,28 @@
         android:orientation="vertical"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:padding="16dp">
+        android:padding="@dimen/list_text_padding">
 
         <TextView
             android:id="@+id/track"
             tools:text="Some track name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/ListItems.Text"/>
 
         <TextView
             android:id="@+id/author"
             tools:text="Some Author"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/ListItems.Text"/>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/track_time"
         tools:text="04:44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"/>
+        style="@style/ListItems.Time"/>
 
     <ImageView
         android:id="@+id/play_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:padding="8dp"
         android:src="@drawable/ic_play_arrow"
-        android:layout_gravity="center_vertical"/>
+        style="@style/ListItems.Button"/>
 
 </LinearLayout>

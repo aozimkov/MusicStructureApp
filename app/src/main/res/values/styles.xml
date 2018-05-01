@@ -8,4 +8,84 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Song Activity -->
+    <style name="SongDescription.Image" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="SongDescription.PlayButton" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">@dimen/song_play_button</item>
+    </style>
+
+    <style name="SongDescription.Text" parent="AppTheme">
+        <item name="android:textColor">@color/songTextColor</item>
+        <item name="android:shadowColor">@color/songTextShadow</item>
+        <item name="android:shadowDx">4</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="SongDescription.Large" parent="SongDescription.Text">
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:paddingLeft">@dimen/song_name</item>
+        <item name="android:paddingRight">@dimen/song_name</item>
+    </style>
+
+    <style name="SongDescription.SongAuthor" parent="SongDescription.Text">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:paddingBottom">@dimen/song_author</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="SongDescription.SongName" parent="SongDescription.Large">
+        <item name="android:layout_marginBottom">@dimen/song_name</item>
+    </style>
+
+    <style name="SongDescription.SongTime" parent="SongDescription.Large">
+        <item name="android:layout_marginBottom">@dimen/song_time</item>
+    </style>
+
+    <!-- Main Activity List Items -->
+    <style name="ListItems" parent="AppTheme">
+
+    </style>
+
+    <style name="ListItems.Image">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/list_icon</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="ListItems.Text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ListItems.Time">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="ListItems.Button">
+        <item name="android:layout_width">@dimen/list_playbutton_size</item>
+        <item name="android:layout_height">@dimen/list_playbutton_size</item>
+        <item name="android:padding">@dimen/list_playbutton_padding</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
 </resources>

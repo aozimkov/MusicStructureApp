@@ -5,10 +5,11 @@ public class Song {
 
     private String mSongName;
     private String mSongAuthor;
-    private String mSongDescription;
+    private String mSongAlbum;
     private int mSongImage;
     private boolean mPlayStatus;
     private String mSongTime;
+    private boolean mRecommended;
 
 
     /**
@@ -18,31 +19,17 @@ public class Song {
      * @param songAuthor Author name
      * @param songImage Song image
      * @param playStatus Status of playing. If song plays now - true
-     * @param songDescription Text Description for Song
+     * @param songAlbum Text Description for Song
      * @param songTime Song duration
      */
-    public Song(String songName, String songAuthor, String songDescription, int songImage, boolean playStatus, String songTime) {
+    public Song(String songName, String songAuthor, String songAlbum, int songImage, boolean playStatus, String songTime, boolean recommended) {
         this.mSongName = songName;
         this.mSongAuthor = songAuthor;
-        this.mSongDescription = songDescription;
+        this.mSongAlbum = songAlbum;
         this.mSongImage = songImage;
         this.mPlayStatus = playStatus;
         this.mSongTime = songTime;
-    }
-
-    /**
-     * Constructor for Songs list
-     *
-     * @param mSongName
-     * @param mSongAuthor
-     * @param mSongImage
-     */
-    public Song(String mSongName, String mSongAuthor, int mSongImage, boolean mPlayStatus, String songTime) {
-        this.mSongName = mSongName;
-        this.mSongAuthor = mSongAuthor;
-        this.mSongImage = mSongImage;
-        this.mPlayStatus = mPlayStatus;
-        this.mSongTime = songTime;
+        this.mRecommended = recommended;
     }
 
     public String getmSongName() {
@@ -53,8 +40,8 @@ public class Song {
         return mSongAuthor;
     }
 
-    public String getmSongDescription() {
-        return mSongDescription;
+    public String getmSongAlbum() {
+        return mSongAlbum;
     }
 
     public int getmSongImage() {
@@ -71,5 +58,9 @@ public class Song {
 
     public void setmPlayStatus(boolean mPlayStatus) {
         this.mPlayStatus = mPlayStatus;
+    }
+
+    public boolean ismRecommended() {
+        return mRecommended;
     }
 }
