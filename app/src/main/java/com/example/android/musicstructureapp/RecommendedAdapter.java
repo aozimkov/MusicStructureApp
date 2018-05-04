@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 public class RecommendedAdapter extends ArrayAdapter<Song> {
 
-    public RecommendedAdapter(Activity context, ArrayList<Song> recommended){
-        super(context,0, recommended);
+    public RecommendedAdapter(Activity context, ArrayList<Song> recommended) {
+        super(context, 0, recommended);
     }
 
     @NonNull

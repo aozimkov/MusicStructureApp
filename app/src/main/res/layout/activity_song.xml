@@ -2,10 +2,10 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.musicstructureapp.SongActivity"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicstructureapp.SongActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -42,12 +42,12 @@
         <TextView
 
             android:id="@+id/song_album"
-            android:text="@string/album"
-
             style="@style/SongDescription.Text.SongAlbum"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/song_name"
+            android:text="@string/album"
             tools:text="( Album )" />
 
         <TextView
@@ -75,12 +75,12 @@
         style="@style/SongDescription.Recommended"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/recommended_view"/>
+        android:text="@string/recommended_view" />
 
     <ListView
         android:id="@+id/list_recommended"
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

@@ -29,13 +29,13 @@ public class SongActivity extends AppCompatActivity {
 
         final ArrayList<Song> rec = new ArrayList<Song>();
 
-        rec.add(new Song(0, "Forgotten space cookies", "Dark Invader", "The Content", R.drawable.track1, false, "04:15", true ));
-        rec.add(new Song(2, "Trip to Bangladesh (Psychedelic Progressive Mix)", "Kurash Kurash", "Kurash", R.drawable.track3, false, "03:11", true ));
-        rec.add(new Song(4, "Narramnayan", "Shivat Achieved", "Shivat Achieved", R.drawable.track5, false, "01:35",true ));
+        rec.add(new Song(0, "Forgotten space cookies", "Dark Invader", "The Content", R.drawable.track1, false, "04:15", true));
+        rec.add(new Song(2, "Trip to Bangladesh (Psychedelic Progressive Mix)", "Kurash Kurash", "Kurash", R.drawable.track3, false, "03:11", true));
+        rec.add(new Song(4, "Narramnayan", "Shivat Achieved", "Shivat Achieved", R.drawable.track5, false, "01:35", true));
         rec.add(new Song(7, "Untitled", "Untitled", "Untitled", R.drawable.track8, false, "02:07", true));
-        rec.add(new Song(9, "Forgotten space cookies", "Dark Invader", "The Content", R.drawable.track1, false, "04:15", true ));
-        rec.add(new Song(11, "Trip to Bangladesh (Psychedelic Progressive Mix)", "Kurash Kurash", "Kurash", R.drawable.track3, false, "03:11", true ));
-        rec.add(new Song(13, "Narramnayan", "Shivat Achieved", "Shivat Achieved", R.drawable.track5, false, "01:35",true ));
+        rec.add(new Song(9, "Forgotten space cookies", "Dark Invader", "The Content", R.drawable.track1, false, "04:15", true));
+        rec.add(new Song(11, "Trip to Bangladesh (Psychedelic Progressive Mix)", "Kurash Kurash", "Kurash", R.drawable.track3, false, "03:11", true));
+        rec.add(new Song(13, "Narramnayan", "Shivat Achieved", "Shivat Achieved", R.drawable.track5, false, "01:35", true));
         rec.add(new Song(16, "Untitled", "Untitled", "Untitled", R.drawable.track8, false, "02:07", true));
 
 
@@ -49,14 +49,14 @@ public class SongActivity extends AppCompatActivity {
         boolean intentIsPlay = getIntent().getBooleanExtra("EXTRA_PLAY_STATUS", false);
         isPlay = intentIsPlay;
 
-        songName = (TextView)findViewById(R.id.song_name);
+        songName = (TextView) findViewById(R.id.song_name);
         songName.setText(intentSongName);
 
-        songAuthor = (TextView)findViewById(R.id.song_author);
+        songAuthor = (TextView) findViewById(R.id.song_author);
         songAuthor.setText(intentSongAuthor);
 
         String Album = getString(R.string.album, intentSongAlbum);
-        songAlbum = (TextView)findViewById(R.id.song_album);
+        songAlbum = (TextView) findViewById(R.id.song_album);
         songAlbum.setText(Album);
 
         songTime = (TextView) findViewById(R.id.song_time);
@@ -65,7 +65,7 @@ public class SongActivity extends AppCompatActivity {
         songImage = (ImageView) findViewById(R.id.song_image);
         songImage.setImageResource(intentSongImage);
 
-        ImageView playButton = (ImageView)findViewById(R.id.song_play);
+        ImageView playButton = (ImageView) findViewById(R.id.song_play);
         switchPlayPause(isPlay);
 
         playButton.setOnClickListener(new View.OnClickListener() {
@@ -107,9 +107,9 @@ public class SongActivity extends AppCompatActivity {
         startActivity(backToMain);
     }
 
-    public void switchPlayPause(boolean play){
+    public void switchPlayPause(boolean play) {
 
-        ImageView playButton = (ImageView)findViewById(R.id.song_play);
+        ImageView playButton = (ImageView) findViewById(R.id.song_play);
 
         if (play) {
             playButton.setImageResource(R.drawable.ic_pause_circle_filled);

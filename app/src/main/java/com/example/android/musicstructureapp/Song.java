@@ -1,8 +1,6 @@
 package com.example.android.musicstructureapp;
 
 
-import android.support.annotation.NonNull;
-
 public class Song {
 
     private int mId;
@@ -18,12 +16,12 @@ public class Song {
     /**
      * full constructor for Song View
      *
-     * @param songName Title of the track
+     * @param songName   Title of the track
      * @param songAuthor Author name
-     * @param songImage Song image
+     * @param songImage  Song image
      * @param playStatus Status of playing. If song plays now - true
-     * @param songAlbum Text Description for Song
-     * @param songTime Song duration
+     * @param songAlbum  Text Description for Song
+     * @param songTime   Song duration
      */
     public Song(int id, String songName, String songAuthor, String songAlbum, int songImage, boolean playStatus, String songTime, boolean recommended) {
         this.mId = id;
