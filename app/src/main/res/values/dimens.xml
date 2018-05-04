@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="song_name">16dp</dimen>
-    <dimen name="song_time">32dp</dimen>
-    <dimen name="song_author">48dp</dimen>
-    <dimen name="song_play_button">64dp</dimen>
-    <dimen name="list_icon">64dp</dimen>
+    <dimen name="song_time">16dp</dimen>
+    <dimen name="song_author">16dp</dimen>
+    <dimen name="song_play_button">48dp</dimen>
+    <dimen name="list_icon">80dp</dimen>
     <dimen name="list_text_padding">16dp</dimen>
     <dimen name="list_playbutton_size">48dp</dimen>
     <dimen name="list_playbutton_padding">8dp</dimen>

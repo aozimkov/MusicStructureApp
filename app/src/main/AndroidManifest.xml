@@ -18,10 +18,6 @@
         </activity>
         <activity android:name=".SongActivity"
             android:label="@string/song_view"/>
-        <activity android:name=".SearchActivity"
-            android:label="@string/search_view"/>
-        <activity android:name=".RecommendationsActivity"
-            android:label="@string/recommended_view"></activity>
     </application>
 
 </manifest>

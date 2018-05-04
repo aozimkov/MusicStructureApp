@@ -1,38 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    tools:context="com.example.android.musicstructureapp.SongActivity"
     android:layout_height="match_parent"
-    tools:context="com.example.android.musicstructureapp.SongActivity">
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/song_image"
-        style="@style/SongDescription.Image"
-        tools:src="@drawable/ic_launcher_background"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/songTextShadow">
+
+        <ImageView
+            android:id="@+id/song_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+
+            android:id="@+id/song_author"
+
+            style="@style/SongDescription.Text.Author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_play"
+            tools:text="Author Name" />
+
+        <TextView
+
+            android:id="@+id/song_name"
+
+            style="@style/SongDescription.Text.SongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_author"
+            tools:text="Track 1" />
+
+        <TextView
+
+            android:id="@+id/song_album"
+            android:text="@string/album"
+
+            style="@style/SongDescription.Text.SongAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_name"
+            tools:text="( Album )" />
+
+        <TextView
+
+            android:id="@+id/song_time"
+
+            style="@style/SongDescription.Text.SongTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_album"
+            tools:text="04:44" />
+
+        <ImageView
+
+            android:id="@+id/song_play"
+
+            style="@style/SongDescription.PlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            tools:src="@drawable/ic_play_circle_filled" />
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/song_name"
-        style="@style/SongDescription.SongName"
-        android:layout_above="@id/song_author"
-        tools:text="Track 1"/>
+        style="@style/SongDescription.Recommended"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recommended_view"/>
 
-    <TextView
-        android:id="@+id/song_author"
-        style="@style/SongDescription.SongAuthor"
-        tools:text="Author Name"/>
+    <ListView
+        android:id="@+id/list_recommended"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
 
-    <TextView
-        android:id="@+id/song_time"
-        style="@style/SongDescription.SongTime"
-        android:layout_above="@id/song_name"
-        tools:text="04:44"
-        />
-
-    <ImageView
-        android:id="@+id/song_play"
-        style="@style/SongDescription.PlayButton"
-        android:layout_above="@+id/song_time"
-        tools:src="@drawable/ic_play_circle_filled"
-        />
-
-</RelativeLayout>
+</LinearLayout>

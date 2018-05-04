@@ -1,8 +1,11 @@
 package com.example.android.musicstructureapp;
 
 
+import android.support.annotation.NonNull;
+
 public class Song {
 
+    private int mId;
     private String mSongName;
     private String mSongAuthor;
     private String mSongAlbum;
@@ -22,7 +25,8 @@ public class Song {
      * @param songAlbum Text Description for Song
      * @param songTime Song duration
      */
-    public Song(String songName, String songAuthor, String songAlbum, int songImage, boolean playStatus, String songTime, boolean recommended) {
+    public Song(int id, String songName, String songAuthor, String songAlbum, int songImage, boolean playStatus, String songTime, boolean recommended) {
+        this.mId = id;
         this.mSongName = songName;
         this.mSongAuthor = songAuthor;
         this.mSongAlbum = songAlbum;
@@ -30,6 +34,11 @@ public class Song {
         this.mPlayStatus = playStatus;
         this.mSongTime = songTime;
         this.mRecommended = recommended;
+    }
+
+
+    public int getmId() {
+        return mId;
     }
 
     public String getmSongName() {
@@ -60,7 +69,9 @@ public class Song {
         this.mPlayStatus = mPlayStatus;
     }
 
-    public boolean ismRecommended() {
-        return mRecommended;
+    public void setPause() {
+        this.mPlayStatus = false;
     }
+
+
 }

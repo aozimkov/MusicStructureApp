@@ -7,22 +7,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
     <!-- Song Activity -->
-    <style name="SongDescription.Image" parent="AppTheme">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:scaleType">centerCrop</item>
-    </style>
-
-    <style name="SongDescription.PlayButton" parent="AppTheme">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="SongDescription" parent="AppTheme">
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginBottom">@dimen/song_play_button</item>
     </style>
 
-    <style name="SongDescription.Text" parent="AppTheme">
+    <style name="SongDescription.PlayButton" parent="SongDescription">
+        <item name="android:layout_marginTop">@dimen/song_play_button</item>
+    </style>
+
+    <style name="SongDescription.Text" parent="SongDescription">
         <item name="android:textColor">@color/songTextColor</item>
         <item name="android:shadowColor">@color/songTextShadow</item>
         <item name="android:shadowDx">4</item>
@@ -31,29 +25,29 @@
         <item name="android:textStyle">bold</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_centerHorizontal">true</item>
     </style>
 
-    <style name="SongDescription.Large" parent="SongDescription.Text">
-        <item name="android:textAppearance">?android:textAppearanceLarge</item>
-        <item name="android:paddingLeft">@dimen/song_name</item>
-        <item name="android:paddingRight">@dimen/song_name</item>
-    </style>
-
-    <style name="SongDescription.SongAuthor" parent="SongDescription.Text">
-        <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:paddingBottom">@dimen/song_author</item>
+    <style name="SongDescription.Text.Author" parent="SongDescription.Text">
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
-    <style name="SongDescription.SongName" parent="SongDescription.Large">
-        <item name="android:layout_marginBottom">@dimen/song_name</item>
+    <style name="SongDescription.Text.SongAlbum" parent="SongDescription.Text">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
-    <style name="SongDescription.SongTime" parent="SongDescription.Large">
-        <item name="android:layout_marginBottom">@dimen/song_time</item>
+    <style name="SongDescription.Text.SongName" parent="SongDescription.Text">
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+    </style>
+
+    <style name="SongDescription.Text.SongTime" parent="SongDescription.Text">
+        <item name="android:layout_marginBottom">@dimen/song_play_button</item>
+    </style>
+
+    <style name="SongDescription.Recommended" parent="SongDescription">
+        <item name="android:textColor">@color/songTextColor</item>
+        <item name="android:padding">@dimen/song_author</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
     <!-- Main Activity List Items -->
@@ -75,10 +69,19 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <style name="ListItems.Text.Song">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="ListItems.Text.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="ListItems.Time">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/list_text_padding</item>
     </style>
 
     <style name="ListItems.Button">

@@ -7,7 +7,7 @@
     android:id="@+id/list_element">
 
     <ImageView
-        android:id="@+id/track_image"
+        android:id="@+id/recommended_track_image"
         android:src="@drawable/ic_launcher_background"
         style="@style/ListItems.Image"/>
 
@@ -20,30 +20,20 @@
         android:padding="@dimen/list_text_padding">
 
         <TextView
-            android:id="@+id/track"
+            android:id="@+id/recommended_track"
             tools:text="Some track name"
             style="@style/ListItems.Text.Song"/>
 
         <TextView
-            android:id="@+id/album"
-            tools:text="Some Author"
-            style="@style/ListItems.Text"/>
-
-        <TextView
-            android:id="@+id/author"
+            android:id="@+id/recommended_author"
             tools:text="Some Author"
             style="@style/ListItems.Text.Bold"/>
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/track_time"
+        android:id="@+id/recommended_track_time"
         tools:text="04:44"
         style="@style/ListItems.Time"/>
-
-    <ImageView
-        android:id="@+id/play_button"
-        android:src="@drawable/ic_play_arrow"
-        style="@style/ListItems.Button"/>
 
 </LinearLayout>
